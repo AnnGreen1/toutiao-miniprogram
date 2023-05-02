@@ -1,0 +1,20 @@
+<!-- 新闻列表组件: news-list.wxml -->
+<view class="news-box">
+  <!-- 左边区域 -->
+  <view class="news-box-left">
+    <!-- 新闻图片 -->
+    <image class="news-pic" src="{{news.pic}}" mode="aspectFit"></image>
+  </view>
+  <!-- 右边区域 -->
+  <view class="news-box-right">
+    <!-- 上方新闻标题 -->
+    <view class="news-title">{{news.title}}</view>
+    <!-- 下方新闻信息 -->
+    <view class="news-info">
+      <!-- 新闻时间 -->
+      <text class="news-time">{{news.time}}</text>
+      <!-- 新闻来源 -->
+      <text class="news-source">{{news.src}}</text>
+    </view>
+  </view>
+</view>

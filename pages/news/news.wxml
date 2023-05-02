@@ -1,0 +1,12 @@
+<!-- home.wxml-->
+<view class="news">
+  <!--标签页导航-->
+  <scroll-view class="nav" show-scrollbar="false" scroll-x="true" enable-flex>
+    <view class="nav-item {{item == current_item ? 'nav-item-active':''}}" wx:for="{{channel}}" wx:key="index" bind:tap="selectNav" data-selected="{{item}}">{{item}}</view>
+  </scroll-view>
+
+  <scroll-view class="content" scroll-y show-scrollbar="false" >
+    <!--自定义组件：新闻列表-->
+    <news-list wx:for="{{newsList}}" wx:key="index" news="{{item}}" data-news="{{item}}" bind:tap="readNews"></news-list>
+  </scroll-view>
+</view>

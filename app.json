@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/news/news",
+    "pages/requestdemo/requestdemo",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F04142",
+    "navigationBarTitleText": "今日头条",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,5 @@
+<view>
+  <view class="center">
+    {{ content }}
+  </view>
+</view>
