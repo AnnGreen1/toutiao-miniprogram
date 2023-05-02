@@ -7,9 +7,10 @@ import {
 
 Page({
   data: {
-    appkey:"eb59e0c742b44907",
+    // appkey:"eb59e0c742b44907",
+    appkey:"32ba3acb4a601a62",
     channel: {},
-    newsList:'',
+    newsList:[],
     current_item:"头条",
     start:0,
     num:10
@@ -18,7 +19,7 @@ Page({
    this.channelfun();
    this.newsfun();
   },
-  newsfun(){
+  newsfun(type){
     let data = {
       'appkey':this.data.appkey,
       'channel':this.data.current_item,
@@ -64,10 +65,25 @@ Page({
   },
   selectNav: function(e)
   {
-    //console.log(e.target.dataset.selected);
+    console.log(e.target.dataset.selected);
     this.setData({
       current_item: e.target.dataset.selected
     })
+    this.setData({
+      newsList:''
+    })
     this.newsfun();
   },
+  readNews(e){
+    wx.setStorage(
+      {
+        key:"news",
+        data: e.target.dataset.news
+      }
+    )
+
+    wx.navigateTo({
+      url: '../detial/detial',
+    })
+  }
 })

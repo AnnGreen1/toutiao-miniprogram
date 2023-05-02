@@ -1,0 +1,5 @@
+page{
+  box-sizing: border-box;
+  padding:50rpx 30rpx 100rpx 30rpx;
+  line-height: 60rpx;
+}

@@ -1,0 +1,4 @@
+<!--datail.wxml-->
+<view class="body">
+  <mp-html class="content" content="{{html}}"></mp-html>
+</view>
