@@ -1,0 +1,7 @@
+<!--ad.wxml-->
+<view class="body" style="background-image: url(../../assets/bg.jpg);">
+  <view class="time" bindtap="toHome">跳过广告：{{countdown}}秒</view>
+  <view>
+    <image src="../../assets/toutiao.png" class="ad" mode="aspectFit"></image>
+  </view>
+</view>

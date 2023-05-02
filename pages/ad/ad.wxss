@@ -1,0 +1,25 @@
+/* pages/ad/ad.wxss */
+page {
+  margin: 0px;
+  padding: 0px;
+}
+
+.time {
+  position: fixed;
+  bottom: 50rpx;
+  right: 40rpx;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 6rpx 10rpx;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.7);
+  font-size: 28rpx;
+  color: ghostwhite;
+}
+
+.ad {
+  width: 100vw;
+  height: 100vh;
+}

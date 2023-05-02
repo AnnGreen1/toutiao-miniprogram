@@ -3,14 +3,14 @@ const request = (config) => {
     wx.request({
       ...config,
       timeout: 5000,
-      header: {}, //header中可以添加token值等
-      success(res) { //监听成功后的操作
+      header: {}, 
+      success(res) { 
         // console.log(res);
         if (res.statusCode === 200) {
           resolve(res.data)
         }
       },
-      fail(error) { //返回失败也同样传入reject()方法
+      fail(error) {
         // console.log(error);
         reject(error)
       }
