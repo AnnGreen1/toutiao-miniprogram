@@ -17,7 +17,7 @@ Page({
 
   toHome(){
     clearInterval(this.data.timeInterval)
-    wx.navigateTo({
+    wx.switchTab({
       url: '../news/news',
     })
   },

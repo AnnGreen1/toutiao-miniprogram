@@ -8,7 +8,7 @@ import {
 Page({
   data: {
     // appkey:"eb59e0c742b44907",
-    // appkey:"32ba3acb4a601a62",
+    appkey:"32ba3acb4a601a62",
     channel: {},
     newsList:[],
     current_item:"头条",
@@ -81,7 +81,20 @@ Page({
         data: e.target.dataset.news
       }
     )
-
+    wx.getStorage(
+      {
+        key:"num",
+        success:(num)=>{
+          console.log(num)
+          wx.setStorage(
+            {
+              key:"num",
+              data: num.data+1
+            }
+          )
+        }
+      }
+      )
     wx.navigateTo({
       url: '../detial/detial',
     })
