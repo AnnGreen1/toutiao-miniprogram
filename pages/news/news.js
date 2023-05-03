@@ -8,7 +8,7 @@ import {
 Page({
   data: {
     // appkey:"eb59e0c742b44907",
-    appkey:"32ba3acb4a601a62",
+    // appkey:"32ba3acb4a601a62",
     channel: {},
     newsList:[],
     current_item:"头条",
