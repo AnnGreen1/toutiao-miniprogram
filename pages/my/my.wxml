@@ -1,19 +1,13 @@
-<!--my.wxml-->
-<view class="body">
-  <view class="userInfo-box">
-    <image class="dafault_avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
-    <text class="dafault_nickname">{{userInfo.nickName ? userInfo.nickName : "未登录"}}</text>
-    <view style="width:20rpx;height:30rpx;">
-      
-    </view>
-    <text class="dafault_nickname">浏览文章次数：{{num}}</text>
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo"wx:if="{{userInfo}}">
+    <block>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl ? userInfo.avatarUrl:defaultavatar}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
-
-  <block wx:if="{{!isLogin}}">
-    <view class="tip-box">
-      <image class="logo" xrc="../../icons/logo.png" mode="widthFix"></image>
-      
-    </view>
-    <button type="primary" bindtap="getUserInfo">授权登录</button>
-  </block>
+  <view class="usermotto">
+    <text class="user-motto">浏览文章次数：{{num}}</text>
+  </view>
+  <button type="primary" size="mini" bindtap="getUserInfo" class="button" disabled="{{Object.keys(userInfo).length==0}}">授权登录</button>
 </view>

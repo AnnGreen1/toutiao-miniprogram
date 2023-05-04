@@ -1,15 +1,12 @@
-Page({
+// index.js
+// 获取应用实例
+const app = getApp()
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
-    userInfo: {
-      avatarUrl: "../../assets/default_avatar.png",
-      nickName: ""
-    },
-    isLogin: false,
-    num:0
+    defaultavatar:'../../assets/default_avatar.png',
+    num:0,
+    userInfo: {},
   },
   onShow() {
     wx.getStorage(
@@ -24,8 +21,7 @@ Page({
       }
       )
    },
-  // 获取用户信息
-  getUserInfo() {
+  getUserInfo(e) {
     wx.getUserProfile({
       desc: 'desc',
       success: (result) => {
@@ -38,5 +34,5 @@ Page({
       fail: (res) => {},
       complete: (res) => {},
     })
-  },
+  }
 })
